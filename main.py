@@ -44,7 +44,7 @@ def radial_plot():
     ax_r.set_theta_offset(np.pi/2)
 
 if __name__ == "__main__":
-    from calculate.linear_tragectory import linear_tragectory as LT
+    from calculate import linear_tragectory as LT
     max_disp = 40
     outStroke = LT.Constant_Acceleration(60,max_disp)
     returnStroke = LT.Constant_Acceleration(120,max_disp)
