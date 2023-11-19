@@ -9,7 +9,7 @@ r = np.zeros(np.shape(theta))
 
 
 def merger():
-    new_angle = cv.angle
+    new_angle = outStroke.angle
     r[:new_angle] = outStroke.outStroke(theta)
     prev_angle = new_angle
     new_angle += dwell
@@ -46,11 +46,9 @@ def radial_plot():
 if __name__ == "__main__":
     from calculate.linear_tragectory import linear_tragectory as LT
     max_disp = 40
-    cv = LT.Constant_Acceleration(60,max_disp)
-    cv2 = LT.Constant_Acceleration(120,max_disp)
-    outStroke = cv
+    outStroke = LT.Constant_Acceleration(60,max_disp)
+    returnStroke = LT.Constant_Acceleration(120,max_disp)
     dwell = 30
-    returnStroke = cv2
     
     rF = 20 # Offset Distance
     rB = 50 # Base Circle
